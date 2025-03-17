@@ -1,8 +1,6 @@
 import React from "react";
 import { marked } from "marked";
 
-const markdown = require("markdown").markdown;
-
 const initialInput = `
 # Header 1
 
