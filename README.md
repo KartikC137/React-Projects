@@ -1,3 +1,3 @@
-# LearningReact.js
+# Markdown Previewer
 
-Project 1 (Random Quote Generator) : https://kartikc137.github.io/React-Projects/
+## https://kartikc137.github.io/React-Projects/
