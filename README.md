@@ -1,3 +1,5 @@
 # Markdown Previewer
 
-## https://kartikc137.github.io/React-Projects/
+- A simple markdown to text converter.
+
+## https://markdown-previewe-fcc-project.netlify.app/
