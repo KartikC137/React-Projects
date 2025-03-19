@@ -1,0 +1,88 @@
+$signature-box-shadow:
+        0 0 32px 5px rgba(255, 128, 166, 0.9) inset,
+        3px 3px 2px 1px rgba(219, 112, 147, 0.9);
+$accent-border: 2px double darkred;
+$accent-outline: 3px solid palevioletred;
+
+
+body{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+
+  background-color: rgba(139,0,0,0.1);
+  box-shadow: 0 0 200px 1px rgba(240, 128, 128, 0.9) inset;
+}
+
+#drum-machine{
+  display: flex;
+  padding: 20px;
+
+  border: $accent-border;
+  outline: $accent-outline;
+  background-color: #ffffff;
+
+}
+
+#pads-container {
+  display: grid;
+  grid-template-columns: repeat(3,100px);
+  grid-auto-rows: 100px;
+  gap: 10px;
+
+}
+
+.drum-pad {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid darkred;
+  box-shadow: $signature-box-shadow;
+  background-color: white;
+
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.2em;
+  color: darkred;
+
+  transition: box-shadow ease-in 0.1s, transform ease-in 0.1s;
+
+}
+
+.drum-pad:hover{
+  box-shadow: 0 0 40px 5px rgb(255, 128, 166,0.9) inset, 3px 3px 2px 1px rgba(219, 112, 147, 0.9);
+  background-color: white;
+}
+
+.drum-pad.active, .drum-pad:active{
+  box-shadow: 0 0 32px 5px rgb(255, 128, 166) inset;
+  transform: translate(3px, 3px);
+}
+
+#dashboard {
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#display {
+  min-width: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: darkred;
+  box-shadow:$signature-box-shadow;
+  border: $accent-border;
+  outline: $accent-outline;
+}
