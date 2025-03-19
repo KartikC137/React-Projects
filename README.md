@@ -1,4 +1,3 @@
-# LearningReact.js
+# Drum Machine
 
-Project 1 (Random Quote Generator) : https://kartikc137.github.io/React-Projects/
-Project 2 (Markdown Previewer) : https://markdown-previewe-fcc-project.netlify.app/
+- A web interface that lets you play drum-set with your keys. 
