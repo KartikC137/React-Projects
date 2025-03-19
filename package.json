@@ -1,6 +1,6 @@
 {
-  "homepage" : "https://KartikC137.github.io/React-Projects",
-  "name": "random-quote-generator",
+  "homepage" : ".",
+  "name": "drum-machine",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

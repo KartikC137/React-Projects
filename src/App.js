@@ -1,14 +1,19 @@
-import "./App.css";
 import React from "react";
-import Quotes from "./components/Quotes";
 
-// imma style this later
-function App() {
-  return (
-    <div id="quote-box">
-      <Quotes />
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {}
+
+  }
+
+  // Render:
+  render() {
+    return (
+        <div id="drum-machine"></div>
+    );
+  }
+
 }
 
 export default App;
