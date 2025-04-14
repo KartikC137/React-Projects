@@ -1,10 +1,3 @@
-$signature-box-shadow:
-        0 0 32px 5px rgba(255, 128, 166, 0.9) inset,
-        3px 3px 2px 1px rgba(219, 112, 147, 0.9);
-$accent-border: 2px double darkred;
-$accent-outline: 3px solid palevioletred;
-
-
 body{
   position: absolute;
   top: 0;
@@ -16,73 +9,84 @@ body{
   align-items: center;
   margin: 0;
 
-  background-color: rgba(139,0,0,0.1);
-  box-shadow: 0 0 200px 1px rgba(240, 128, 128, 0.9) inset;
+  background-color: rgba(74, 101, 236,0.1);
 }
 
-#drum-machine{
-  display: flex;
-  padding: 20px;
+#calculator-box{
+  border: 2px solid rgba(255, 21, 0, 0.69);;
+  width: 400px;
+  height: 1fr;
 
-  border: $accent-border;
-  outline: $accent-outline;
-  background-color: #ffffff;
-
-}
-
-#pads-container {
-  display: grid;
-  grid-template-columns: repeat(3,100px);
-  grid-auto-rows: 100px;
-  gap: 10px;
-
-}
-
-.drum-pad {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 2px solid darkred;
-  box-shadow: $signature-box-shadow;
-  background-color: white;
-
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 1.2em;
-  color: darkred;
-
-  transition: box-shadow ease-in 0.1s, transform ease-in 0.1s;
-
-}
-
-.drum-pad:hover{
-  box-shadow: 0 0 40px 5px rgb(255, 128, 166,0.9) inset, 3px 3px 2px 1px rgba(219, 112, 147, 0.9);
-  background-color: white;
-}
-
-.drum-pad.active, .drum-pad:active{
-  box-shadow: 0 0 32px 5px rgb(255, 128, 166) inset;
-  transform: translate(3px, 3px);
-}
-
-#dashboard {
-  width: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 5px;
 }
 
 #display {
-  min-width: 200px;
+  border: 2px solid rgba(37, 188, 37, 0.69);
+  height: 90px;
+  width: 1fr;
 
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
+  padding: 5px;
+}
 
-  color: darkred;
-  box-shadow:$signature-box-shadow;
-  border: $accent-border;
-  outline: $accent-outline;
+#calculator-components{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  height: 400px;
+  margin-top: 5px;
+}
+
+#clear {
+  grid-column: span 2;
+
+  background-color: rgba(255, 21, 0, 0.69);
+
+  transition: all ease-in-out 0.1s;
+}
+
+#clear:hover {
+  box-shadow: 0 0 70px 5px rgba(255,21,0, 0.8) inset;
+  background-color: white;
+  border: 1px solid rgba(255, 21, 0, 0.69);
+}
+
+#zero {
+  grid-column: span 2;
+}
+
+#equals{
+  grid-row: span 2;
+
+  background-color: #006ee8;
+
+  transition: all ease-in-out 0.1s;
+}
+
+#equals:hover{
+  box-shadow: 0 0 70px 5px rgba(0,110,232,0.8) inset;
+  background-color: white;
+  border: 1px solid rgba(0,110,232,0.8);
+}
+
+.components{
+  border: 1px solid #4a65ec;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: ease-in-out 0.1s;
+}
+
+.components:hover{
+  box-shadow: 0 0 40px 5px rgb(74,101,236) inset;
+  background-color: white;
+}
+
+.components:active {
+  box-shadow: 0 0 32px 5px rgb(74,101,236) inset;
+  transform: translate(1px, 1px);
 }

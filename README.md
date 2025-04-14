@@ -1,3 +1,3 @@
-# Drum Machine
+# Calculator
 
-- A web interface that lets you play drum-set with your keys. 
+- Basic JS Calculator
