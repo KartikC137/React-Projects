@@ -50,6 +50,7 @@ class App extends React.Component {
       const exp = this.formatExpression(this.state.expression);
       console.log("formatted:",exp);
         if(this.isValidExpression(exp)) {
+          // eslint-disable-next-line no-new-func
           const rawResult = new Function(`return ${exp}`)();
           const result = parseFloat(rawResult.toFixed(10));
           this.setState({
@@ -126,7 +127,8 @@ class App extends React.Component {
       return false;
     }
     // 2. Check for invalid operator sequences (except '-' for negatives)
-    if (/[*\/+\-]{2,}/.test(exp.replace(/-\d/g, ''))) {
+    if (/([-+*/]){2,}/.test(exp.replace(/-\d/g, '')))
+    {
       return false;
     }
     // 3. Check for consecutive dots or malformed decimals
