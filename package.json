@@ -1,6 +1,6 @@
 {
   "homepage" : ".",
-  "name": "calculator",
+  "name": "25+5 Clock",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
