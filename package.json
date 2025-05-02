@@ -1,11 +1,12 @@
 {
-  "homepage" : ".",
+  "homepage": ".",
   "name": "25+5 Clock",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^5.5.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -40,4 +41,3 @@
     "sass": "^1.85.1"
   }
 }
-

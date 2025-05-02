@@ -1,0 +1,136 @@
+
+@mixin flex($drctn: null, $jstfy-cntnt: null, $lgn-tms: null) {
+  display: flex;
+  flex-direction: $drctn;
+  justify-content: $jstfy-cntnt;
+  align-items: $lgn-tms;
+}
+
+body {
+  @include flex(null,center,center);
+  background-color: #FFF4E1;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  h1 {
+    text-align: center;
+    color: #FFA702;
+  }
+
+  #break-session-container {
+    @include flex(row, center, null);
+    column-gap: 2rem;
+  }
+
+  .control-format {
+    @include flex(column, null, center);
+
+    .control-label {
+      @include flex(null,center,center);
+      color: #914a82;
+      border-radius: 5px;
+      padding: 0.7rem 1rem;
+      border: none;
+      backdrop-filter: blur(10px);
+    }
+
+    .control-container {
+      @include flex(null,center,center);
+
+      .incr-decr {
+        padding: 0.5rem;
+        height: 50px;
+        width: 50px;
+        font-size: 1.5rem;
+        border-radius: 50%;
+        background: #FFF4E1;
+      }
+
+      #session-increment,#session-decrement{
+        border: 2px solid #E24B1D;
+        color: #E24B1D;
+      }
+      #break-increment,#break-decrement{
+        border: 2px solid #00843D;
+        color: #00843D;
+      }
+      #session-length{
+        color: #E24B1D;
+      }
+      #break-length{
+        color: #00843D;
+      }
+    }
+
+    #break-length,
+    #session-length {
+      @include flex(row, center, center);
+      color: #E24B1D;
+      font-size: 1.4rem;
+      height: 2rem;
+      width: 1rem;
+      margin: 0 1rem;
+    }
+  }
+
+  #timer-container {
+    @include flex(column,center,center);
+    margin-top: 1rem;
+    column-gap: 1rem;
+
+    #timer-inner-container {
+      width: 400px;
+      height: 200px;
+      background: rgba(226, 75, 29, 0.2);
+      color: #E24B1D;
+      border: 2px solid #FFA702;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      border-radius: 20px;
+
+      #timer-label {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 15px;
+      }
+
+      #time-left {
+        @include flex(row, center, center);
+        font-size: 5.3rem;
+      }
+    }
+  }
+
+  #media-controls-container{
+    @include flex(row,center,center);
+    width: 400px;
+    column-gap: 1rem;
+    #start_stop {
+      background-color: rgba(0, 132, 61, 0.2);
+      color: #00843D;
+      border: 2px solid #00843D;
+      border-radius: 8px;
+      font-size: 2rem;
+      padding: 5px 15px;
+      margin-top: 15px;
+    }
+
+    #reset {
+      @include flex(null,center,center);
+      background-color: #FFF4E1;
+      border: 2px solid #914a82;
+      border-radius: 50%;
+      margin-top: 15px;
+      height: 3.5rem;
+      width: 3.5rem;
+    }
+    #reset svg {
+      stroke-width: 2;
+      width: 2rem;
+      height: 2rem;
+    }
+
+  }
+
+
+}
